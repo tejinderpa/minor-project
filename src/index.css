@@ -112,3 +112,25 @@
 .animate-pulse-glow {
   animation: pulse-glow 2s ease-in-out infinite;
 }
+
+/* ── Hero grid background ── */
+.hero-grid {
+  background-image:
+    linear-gradient(hsl(var(--primary) / 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, hsl(var(--primary) / 0.06) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* ── Slow-drifting orbs ── */
+@keyframes orb-slow {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33%       { transform: translate(30px, -20px) scale(1.05); }
+  66%       { transform: translate(-20px, 15px) scale(0.97); }
+}
+@keyframes orb-slow-2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33%       { transform: translate(-25px, 20px) scale(1.03); }
+  66%       { transform: translate(20px, -15px) scale(0.98); }
+}
+.animate-orb-slow   { animation: orb-slow   12s ease-in-out infinite; }
+.animate-orb-slow-2 { animation: orb-slow-2 16s ease-in-out infinite; }
